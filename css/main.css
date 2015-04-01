@@ -69,3 +69,44 @@ body {
     color: #1b809e
 }
 
+.title {}
+
+.colorDesc {
+	float: right;
+}
+
+/* TODO: Shapes namespace here */
+.shapeDiv {
+	margin-right: 7px;
+	display: inline-block;
+}
+	p.shapeDesc {
+		display: inline-block;
+	}
+	/* TODO: Rectangles inheritance, change colors */
+	.rectangle-info {
+		height: 20px;
+		width: 5px;
+		background-color: #1b809e;
+		float: left;
+		margin-right: 2px;
+	}
+	.rectangle-warning {
+		height: 20px;
+		width: 5px;
+		background-color: #aa6708;
+		float: left;
+		margin-right: 2px;
+	}
+	.rectangle-danger {
+		height: 20px;
+		width: 5px;
+		background-color: #ce4844;
+		float: left;
+		margin-right: 2px;
+	}
+
+.stepsContainer {
+	clear: both;
+}
+

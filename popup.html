@@ -1,63 +1,82 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body id="popup">
-        <div>
-            <div class="container">
-                <h3>Development Sequence</h3>
-                <div>
-                    <p class="bs-callout bs-callout-info">Move ticket to in "progress"</p>
-                    <ul class="bs-callout bs-callout-warning">
-                        <li>Make a ticket branch (ex. conn/bk-xxxx)</li>
-                        <li>Code away.....</li>
-                        <li>Commit code</li>
-		    </ul>
-		    <ul class="bs-callout bs-callout-danger">
-			<li>Squatsh (Optional)</li>
-			<li>git rebase -i HEAD~(NUMBER OF VERSIONS)</li>
-			<li>git push --force origin (BRANCH NAME)</li>
-			<li>git cherry-pick using the commit #</li>
-		    </ul>
-		    <ul class="bs-callout bs-callout-warning">
-			<li>git push upstream (save commit #)</li>
-                    </ul>
-                </div>
-                <div>
-                    <p class="bs-callout bs-callout-info">Move to code review</p>
-                    <ul class="bs-callout bs-callout-warning">
-                        <li>Checkout the sprint's branch</li>
-                        <li>git pull code</li>
-                        <li>git cherry-pick using the commit #</li>
-                        <li>Write the alpha test notes</li>
-                        <li>git push upstream</li>
-                        <li>Login to QA server (ssh)</li>
-                        <li>Change user (sudo su - htmladmin)</li>
-                        <li>Move to the htdocs folder (cd /home/httpd/htdocs/)</li>
-                        <li>Pull code</li>
-                        <li>Clear QA cache <br/>(https://tools.bookit.com/utilities/box-manager/index.php)</li>
-                    </ul>
-                </div>
-                <div>
-                    <p class="bs-callout bs-callout-info">Move to testing</p>
-                </div>
-                <div>
-                    <p class="bs-callout bs-callout-info">When status === "Check in Code"</p>
-		    <ul class="bs-callout bs-callout-warning">
-                        <li>Checkout the develop branch</li>
-                        <li>git cherry-pick all commits (might need to Squatsh commits)</li>
-                        <li>git push upstream</li>
-                    </ul>
-                </div>
+	<head>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body id="popup">
 		<div>
-                    <p class="bs-callout bs-callout-info">Click "Code Diff Complete"</p>
-                </div>
-		<div>
-                    <p class="bs-callout bs-callout-info">Write "Deployment Plan"</p>
-                </div>
-            </div>
-        </div>
-    </body>
+			<div class="container">
+				<h3 class="title">Development Sequence</h3>
+				<div class="colorDesc">
+					<div class="shapeDiv">
+						<div class="rectangle-info"></div>
+						<p class="shapeDesc">Agile</p>
+					</div>
+					<div class="shapeDiv">
+						<div class="rectangle-warning"></div>
+						<p class="shapeDesc">Git</p>
+					</div>
+					<div class="shapeDiv">
+						<div class="rectangle-danger"></div>
+						<p class="shapeDesc">Optional?</p>
+					</div>
+				</div>
+				<div class="stepsContainer">
+					<div>
+						<p class="bs-callout bs-callout-info">Move ticket to in "progress"</p>
+						<ul class="bs-callout bs-callout-warning">
+							<li>Make a ticket branch and switch to it (format must be <i>conn/bk-####)</i></li>
+							<li><pre>git checkout -b &lt;branch name&gt;</pre></li>
+							<li>Code <sup>away.....</sup></li>
+							<li>Commit code</li>
+							<li><pre>git add [.][&lt;file&gt;]</pre></li>
+							<li><pre>git commit</pre></li>
+						</ul>
+						<ul class="bs-callout bs-callout-danger">
+							<li>Squash (Optional)</li>
+							<li><pre>git rebase -i HEAD~&lt;# of commits&gt;</pre></li>
+							<li><pre>git push --force origin &lt;branch name&gt;</pre></li>
+							<li><pre>git cherry-pick &lt;commit hash&gt;</pre></li>
+						</ul>
+						<ul class="bs-callout bs-callout-warning">
+							<li>git push upstream (save commit #)</li>
+						</ul>
+					</div>
+					<div>
+						<p class="bs-callout bs-callout-info">Move to code review</p>
+						<ul class="bs-callout bs-callout-warning">
+							<li>Checkout the sprint's branch</li>
+							<li>git pull code</li>
+							<li>git cherry-pick using the commit #</li>
+							<li>Write the alpha test notes</li>
+							<li>git push upstream</li>
+							<li>Login to QA server (ssh)</li>
+							<li>Change user (sudo su - htmladmin)</li>
+							<li>Move to the htdocs folder (cd /home/httpd/htdocs/)</li>
+							<li>Pull code</li>
+							<li>Clear QA cache <br/>(https://tools.bookit.com/utilities/box-manager/index.php)</li>
+						</ul>
+					</div>
+					<div>
+						<p class="bs-callout bs-callout-info">Move to testing</p>
+					</div>
+					<div>
+						<p class="bs-callout bs-callout-info">When status === "Check in Code"</p>
+						<ul class="bs-callout bs-callout-warning">
+							<li>Checkout the develop branch</li>
+							<li>git cherry-pick all commits (might need to Squatsh commits)</li>
+							<li>git push upstream</li>
+						</ul>
+					</div>
+					<div>
+						<p class="bs-callout bs-callout-info">Click "Code Diff Complete"</p>
+					</div>
+					<div>
+						<p class="bs-callout bs-callout-info">Write "Deployment Plan"</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -7,21 +7,24 @@
 	<body id="popup">
 		<div>
 			<div class="container">
-				<h3 class="title">Development Sequence</h3>
-				<div class="colorDesc">
-					<div class="shapeDiv">
-						<div class="rectangle-info"></div>
-						<p class="shapeDesc">Agile</p>
-					</div>
-					<div class="shapeDiv">
-						<div class="rectangle-warning"></div>
-						<p class="shapeDesc">Git</p>
-					</div>
-					<div class="shapeDiv">
-						<div class="rectangle-danger"></div>
-						<p class="shapeDesc">Optional?</p>
-					</div>
-				</div>
+                <div class="row">
+                    <div class="col-md-8 col-sd-8">
+                        <h3 class="title">Steps</h3>
+                    </div>
+                    <div class="col-md-4 col-sd-4">
+                        <div class="row">
+                            <spam class="col-sd-4 bs-callout bs-callout-info">
+                                Agile
+                            </spam>
+                            <spam class="col-sd-4 bs-callout bs-callout-warning">
+                                Git
+                            </spam>
+                            <spam class="col-sd-4 bs-callout bs-callout-danger">
+                                Optional
+                            </spam>
+                        </div>
+                    </div>
+                </div>
 				<div class="stepsContainer">
 					<div>
 						<p class="bs-callout bs-callout-info">Move ticket to in "progress"</p>
@@ -40,22 +43,24 @@
 							<li><pre>git cherry-pick &lt;commit hash&gt;</pre></li>
 						</ul>
 						<ul class="bs-callout bs-callout-warning">
-							<li>git push upstream (save commit #)</li>
+                            <li><pre>git push</pre></li>
+							<li>Save commit #</li>
 						</ul>
 					</div>
 					<div>
 						<p class="bs-callout bs-callout-info">Move to code review</p>
 						<ul class="bs-callout bs-callout-warning">
 							<li>Checkout the sprint's branch</li>
-							<li>git pull code</li>
-							<li>git cherry-pick using the commit #</li>
+                            <li><pre>git checkout -b &lt;sprint's branch&gt;</pre></li>
+                            <li><pre>git pull</pre></li>
+                            <li><pre>git cherry-pick &lt;using the commit #&lt;</pre></li>
 							<li>Write the alpha test notes</li>
-							<li>git push upstream</li>
+                            <li><pre>git push</pre></li>
 							<li>Login to QA server (ssh)</li>
 							<li>Change user (sudo su - htmladmin)</li>
 							<li>Move to the htdocs folder (cd /home/httpd/htdocs/)</li>
-							<li>Pull code</li>
-							<li>Clear QA cache <br/>(https://tools.bookit.com/utilities/box-manager/index.php)</li>
+							<li><pre>git pull</pre></li>
+                            <li>Clear QA cache</li>
 						</ul>
 					</div>
 					<div>
@@ -64,9 +69,9 @@
 					<div>
 						<p class="bs-callout bs-callout-info">When status === "Check in Code"</p>
 						<ul class="bs-callout bs-callout-warning">
-							<li>Checkout the develop branch</li>
-							<li>git cherry-pick all commits (might need to Squatsh commits)</li>
-							<li>git push upstream</li>
+							<li><pre>git checkout -b &lt;develop&gt;</pre></li>
+                            <li><pre>git cherry-pick &lt;all commits (might need to Squatsh commits)&lt;</pre></li>
+                            <li><pre>git push</pre></li>
 						</ul>
 					</div>
 					<div>

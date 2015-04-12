@@ -1,6 +1,8 @@
+/*
 body {
   font-family: Helvetica, sans-serif;
 }
+*/
 
 #popup {
   min-width: 500px;
@@ -14,6 +16,7 @@ body {
   user-select: none;
 }
 
+/*
 .bs-callout {
     padding: 20px;
     margin: 20px 0;
@@ -72,3 +75,4 @@ body {
 .bs-callout-info h4 {
     color: #1b809e
 }
+*/

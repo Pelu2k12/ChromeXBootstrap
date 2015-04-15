@@ -8,8 +8,12 @@
 		<div>
 			<div class="container">
                 <div class="row">
-                    <h3 class="title">Steps</h3>
-                    <div><button id="popupwindow">popup</button></div>
+                    <div class="col-xs-6">
+                        <h3 class="title">Steps</h3>
+                    </div>
+                    <div class="col-xs-6">
+                        <button id="popupwindow" type="button" class="btn btn-default">popup</button>
+                    </div>
                 </div>
 				<div class="stepsContainer">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -63,7 +67,7 @@
                                     <li class="list-group-item">Checkout the sprint's branch</li>
                                     <li class="list-group-item"><code>git checkout -b &lt;sprint's branch&gt;</code></li>
                                     <li class="list-group-item"><code>git pull</code></li>
-                                    <li class="list-group-item"><code>git cherry-pick &lt;using the commit #&lt;</code></li>
+                                    <li class="list-group-item"><code>git cherry-pick &lt;using the commit #&gt;</code></li>
                                     <li class="list-group-item">Write the alpha test notes</li>
                                     <li class="list-group-item"><code>git push</code></li>
                                 </ul>
@@ -98,7 +102,7 @@
                             <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
                                 <ul class="list-group">
                                     <li class="list-group-item"><code>git checkout -b &lt;develop&gt;</code></li>
-                                    <li class="list-group-item"><code>git cherry-pick &lt;all commits (might need to Squatsh commits)&lt;</code></li>
+                                    <li class="list-group-item"><code>git cherry-pick &lt;all commits (might need to Squatsh commits)&gt;</code></li>
                                     <li class="list-group-item"><code>git push</code></li>
                                 </ul>
                             </div>
